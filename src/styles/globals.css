@@ -2,26 +2,168 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-  color: rgb(var(--foreground-rgb));
+  font-family: "Inter", sans-serif;
+  background-color: #161616;
+}
+
+header {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.9) 100%
     )
-    rgb(var(--background-start-rgb));
+    transparent;
+  z-index: 2;
+}
+
+header:hover {
+  background-color: black;
+}
+
+.active {
+  color: white !important;
+}
+
+.menu-text {
+  cursor: pointer;
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.menu-text:hover {
+  color: white;
+}
+
+.main-slider {
+  margin-top: -90px;
+}
+
+.bg-grad {
+  background-image: linear-gradient(
+    rgba(22, 22, 22, 0) 42%,
+    rgb(22, 22, 22) 100%
+  );
+}
+
+.btn-hover {
+  background-color: rgba(112, 112, 112, 0.4);
+}
+
+.btn-hover:hover {
+  opacity: 0.8;
+  transition: all 300ms ease-in-out 0s;
+}
+
+.menu-text-svg {
+  opacity: 0.8;
+}
+
+.menu-text-svg:hover {
+  opacity: 1;
+  transition: all 300ms ease-in-out 0s;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: white;
+}
+
+.swiper-pagination {
+  bottom: 85px !important;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.swiper-button-prev {
+  visibility: hidden;
+  padding: 40px 25px;
+  background-color: white;
+  color: black !important;
+}
+.swiper-button-next {
+  visibility: hidden;
+  padding: 40px 25px;
+  background-color: white;
+  color: black !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px !important;
+}
+
+.swiper:hover .swiper-button-next,
+.swiper:hover .swiper-button-prev {
+  visibility: visible;
+}
+.description {
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 72px;
+  overflow: hidden;
+}
+.baslik {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 2;
+}
+.hover {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: block;
+}
+
+.container {
+  font-size: 100%;
+  margin-left: 10px;
+}
+.ss:hover {
+  max-width: 292px;
+  background-color: rgb(32, 32, 32);
+  border-radius: var(--roundedlg);
+  overflow: hidden;
+  height: 334px;
+}
+
+.img {
+  position: relative;
+  display: flex;
+}
+.resim {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+.aciklama {
+  display: flex;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  padding: 10px 16px;
+  gap: 10px;
+  color: white;
+  flex-direction: column;
+  width: 100%;
+}
+.aciklama .description {
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 72px;
+  overflow: hidden;
 }

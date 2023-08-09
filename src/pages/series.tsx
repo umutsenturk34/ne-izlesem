@@ -1,13 +1,15 @@
 import SliderTypeOne from "@/components/SliderTypeOne";
 import MainSlider from "@/components/home/MainSlider";
-import SliderTypeVideo from "@/components/SliderTypeVideo";
+import React from "react";
 
-export default function Home() {
+const series = () => {
   return (
     <>
       <MainSlider />;
       <SliderTypeOne className="mt-2 mb-6" title={"ÖNE ÇIKANLAR"} />
-      <SliderTypeVideo className="mt-2 mb-6" title={"YENİ FRAGMANLAR"} />
+      <SliderTypeOne className="mt-2 mb-6" title={"Romantik"} />
     </>
   );
-}
+};
+
+export default series;
